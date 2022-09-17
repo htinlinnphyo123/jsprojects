@@ -15,7 +15,7 @@ const countdowncontainer=document.querySelector('.countdown-container'),
 
 function updatetime(){
 
-    let currentTime = new Date('July 2022 2');
+    let currentTime = new Date();
     let firstTime = new Date('June 2022 2 23:09:00');
     // console.log(getDays(currentTime));
     // console.log(getDays(firstTime));
