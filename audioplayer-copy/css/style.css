@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+*{
+    box-sizing:border-box;
+}
+body{
+    background: linear-gradient(
+        #d47fc6 50%,
+        #f7e4f4 80%
+    );
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0;
+    overflow:hidden;
+}
+.container{
+    z-index:10;
+}
+h1.text{
+    text-align:center;
+    transform:translateY(-5rem);
+}
+.container-fluid{
+    width:25rem;
+    height:8rem;
+    background-color:#fff;
+
+    border-radius:10px;
+    box-shadow:5px 10px 15px rgba(0,0,0,0.5);
+
+    position:relative;
+}
+.imgplayer{
+    width:7rem;
+    height:7rem;
+    border-radius:50%;
+    background-image:url('../img/sample1.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    position:absolute;
+    top:0;
+    left: 10%;
+    transform:translateY(-50%);
+    z-index:10;
+
+    animation:myani 3s linear infinite;
+    animation-play-state: paused;
+}
+.container.active .imgplayer{
+    animation-play-state:running;
+}
+.imgplayer .dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color:#fff;
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+@keyframes myani{
+    to{
+        transform:translateY(-50%) rotate(360deg);
+    }
+}
+
+.iconplayer{
+    width:40%;
+    font-size:1.5rem;
+
+    position:absolute;
+    top:50%;
+    left:45%;
+    transform:translateY(-50%);
+
+    display:flex;
+    justify-content:space-between;
+
+    z-index:10;
+}
+.fa-solid{
+    cursor:pointer;
+}
+.showrange{
+    width:80%;
+    height:80%;
+    background-color:#c79a97;
+    border-radius:10px;
+    padding-left:40%;
+    padding-top:10px;
+
+    position:absolute;
+    top:2%;
+    left:10%;
+
+    z-index:-1;
+    transition:all 0.5s;
+}
+.container.active .showrange{
+    transform:translateY(-80px);
+}
+.range{
+    width:90%;
+    height:5px;
+    border-radius:10px;
+    background-color:#fff;
+
+    cursor:pointer;
+}
+.range-fluid{
+    width: 0%;
+    height: 100%;
+    background-color:blue;
+    border-radius:10px;
+}

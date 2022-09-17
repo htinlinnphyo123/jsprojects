@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Player</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./img/sample1.jpg" rel="icon" type="img/jpg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text">Audio Player</h1>
+        <div class="container-fluid">
+            <div class="imgplayer">
+                <div class="dot"></div>
+            </div>
+            <div class="iconplayer">
+                <i id="prevbtn" class="fa-solid fa-backward"></i>
+                <i id="playbtn" class="fa-solid fa-play"></i>
+                <i id="nextbtn" class="fa-solid fa-forward"></i>
+            </div>
+            <div class="showrange">
+                <p class="music-info">Perfect</p>
+                <div class="range">
+                    <div class="range-fluid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio src="audio/audio1.mp3" id="audio"></audio>
+
+
+    <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>
