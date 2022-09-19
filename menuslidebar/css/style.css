@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --primarycolor:#1d0f4a;
+    --secondarycolor:#a316c9;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    position:relative;
+    margin:0;
+
+    transition:all 0.5s;
+}
+body::before{
+    content:'';
+    width: 100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    opacity:0;
+
+    position:absolute;
+    top:0;
+    left:0;
+}
+body.modalactive::before{
+    opacity:1;
+}
+body.active{
+    transform:translate(20%);
+
+    transition:all 0.5s;
+}
+.navbar-side{
+    width:20%;
+    height:100vh;
+    background-color:var(--primarycolor);
+
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateX(-100%);
+
+    transition:all 0.5s;
+}
+.navbar-side .logo{
+    padding:50px 0;
+    
+    text-align:center;
+}
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+}
+.navbar-side ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.navbar-side ul li{
+    list-style:decimal;
+    padding:15px 50px;
+    border-top:1px solid #fff; 
+}
+.navbar-side ul li:last-child{
+    border-bottom:1px solid #fff;
+}
+.navbar-side ul li a{ 
+    font-size:20px;
+    text-decoration:none;
+    color:#fff;
+}
+.navbar-side ul li a:hover{
+    cursor:pointer;
+    color:green;
+}
+.navbar-side ul li a:active{
+    color:red;
+}
+.navbar-side button{
+    background:transparent;
+    color:#fff;
+    font-size:20px;
+    border:none;
+    cursor:pointer;
+
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.container{
+    width:100%;    
+    position:relative;
+}
+body.active .container{
+    margin-left:10px;
+}
+.container .togglebtn{
+    color:#fff;
+    font-size:25px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+
+    position:absolute;
+    top:10px;
+    left:10px;    
+}
+.container .banner-header{
+    color:#fff;
+    text-align:center;
+    background-color:var(--primarycolor);
+}
+.container .banner-header h1{
+    font-size:40px;
+    padding-top:35px;
+
+}
+.banner-header button{
+    background-color:var(--secondarycolor);
+    padding:10px 20px;
+    border-radius:5px;
+    color:#fff;
+    font-size:20px;
+    margin:15px 0;
+    cursor:pointer;
+    transition:all 0.5s;
+}
+.banner-header button:hover{
+    transform:scale(1.2);
+}
+.banner-body{
+    width:60%;
+    margin:50px auto;
+    line-height:25px;
+}
+.modal{
+    width:30vw;
+    height:65vh;
+    background-color:grey;
+    border-radius:10px;
+    box-shadow:5px 10px 5px rgba(0,0,0,0.5);
+    display:none;
+    
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    overflow:hidden;
+}
+body.modalactive .modal{
+    display:block;
+}
+.modal button{
+    background:transparent;
+    font-size:20px;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.modal h3{
+    padding-left:5px;
+}
+.modal .modal-header{
+    width:100%;
+    height:15%;
+    background-color:var(--secondarycolor);
+    padding:10px 0 10px 10px;
+}
+.modal .form-groups{
+    padding:0 20px;
+}
+.form-group label{
+    display:block;
+    padding:10px 0 5px 0;
+}
+.form-group input[type="text"]{
+    width:100%;
+    color:18px;
+    padding:5px 10px;
+    border:none;
+    border-radius:10px;
+}
+.submitbtn{
+    color:20px;
+    padding:7px 15px;
+    margin:10px 0;
+    background-color:var(--secondarycolor);
+    border-radius:10px;
+    border:none;
+    color:#fff;
+}
+.submitbtn:active{
+    outline:0;
+}
+
+@media (max-width:700px){
+    .container .togglebtn{
+        left:90%;
+    }
+    .banner-header{
+        padding:10px auto;
+    }    
+    .navbar-side{
+        width:100%;
+        height:80vh;
+        transform:translateY(-100%);
+    }
+    body.active{
+        transform:translateY(80vh);
+    }
+    body.active .container{
+        margin-left:0;
+    }
+    body.active .container{
+        transform:translateY(10px);
+    }
+
+}
