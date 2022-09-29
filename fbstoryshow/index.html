@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fb Story with modal box</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>  
+
+
+    <div class="container">
+        <div class="title">
+            Here is your photo.
+        </div>
+        <div class="collection-container">
+            <div class="collection">
+                <img src="./img/image1.jpg" alt="Image 1"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image2.jpg" alt="Image 2"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image3.jpg" alt="Image 3"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image4.jpg" alt="Image 4"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image5.jpg" alt="Image 5"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image6.jpg" alt="Image 6"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image1.jpg" alt="Image 7"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image2.jpg" alt="Image 8"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image3.jpg" alt="Image 9"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image4.jpg" alt="Image 10"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image5.jpg" alt="Image 11"/>
+            </div>
+            <div class="collection">
+                <img src="./img/image6.jpg" alt="Image 12"/>
+            </div>
+        </div> 
+    </div>
+
+
+    <!-- start modal section -->
+
+    <div class="modal">
+        <div class="buttons">
+            <div class="prev-btn">
+                <h1> < </h1>
+            </div>
+            <div class="next-btn">
+                <h1> > </h1>
+            </div>
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark" onclick="closemodal()"></i>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal-view">
+                <div class="view-container">
+                    <div class="view">
+                        <img src="./img/image1.jpg" alt="Image 1"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image2.jpg" alt="Image 2"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image3.jpg" alt="Image 3"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image4.jpg" alt="Image 4"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image5.jpg" alt="Image 5"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image6.jpg" alt="Image 6"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image1.jpg" alt="Image 1"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image2.jpg" alt="Image 2"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image3.jpg" alt="Image 3"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image4.jpg" alt="Image 4"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image5.jpg" alt="Image 5"/>
+                    </div>
+                    <div class="view">
+                        <img src="./img/image6.jpg" alt="Image 6"/>
+                    </div>
+                    <!-- start reaction history -->
+                    <div class="reaction-history-container">
+                        <!-- <span>&#128542;</span>
+                        <span>&#128542;</span>
+                        <span>&#128542;</span>
+                        <span>&#128542;</span>
+                        <span>&#128542;</span> -->
+                    </div>
+                    <!-- end reaction history -->
+                </div>
+                <div class="reactions">
+                    <div id="reply" class="reply">
+                        <input type="text" name="reply" id="inreply" placeholder="Write a message......."/>
+                    </div>
+                    <div id="like" class="reaction">
+                        <i class="fa-solid fa-thumbs-up" style="color:blue;"></i>
+                    </div>
+                    <div id="love" class="reaction">
+                        <i class="fa-solid fa-heart" style="color:red;"></i>
+                    </div>
+                    <div id="haha" class="reaction">
+                        <span>&#128516;</span>
+                    </div>
+                    <div id="sad" class="reaction">
+                        <span>&#128542;</span>
+                    </div>
+                    <div id="wow" class="reaction">
+                        <span>&#128559;</span>
+                    </div>
+                    <div id="angry" class="reaction">
+                        <span>&#128544;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-slideshow">
+                <div class="slide-container active">
+                    <img src="./img/image1.jpg" class="slide-img" alt="slideimg1"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image2.jpg" class="slide-img" alt="slideimg2"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image3.jpg" class="slide-img" alt="slideimg3"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image4.jpg" class="slide-img" alt="slideimg4"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image5.jpg" class="slide-img" alt="slideimg5"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image6.jpg" class="slide-img" alt="slideimg6"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image1.jpg" class="slide-img" alt="slideimg7"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image2.jpg" class="slide-img" alt="slideimg8"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image3.jpg" class="slide-img" alt="slideimg9"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image4.jpg" class="slide-img" alt="slideimg10"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image5.jpg" class="slide-img" alt="slideimg11"/>
+                </div>
+                <div class="slide-container">
+                    <img src="./img/image6.jpg" class="slide-img" alt="slideimg12"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal section  -->
+   
+   
+    <script src="./js/app.js" type="text/javascript"></script>
+</body>
+</html>
